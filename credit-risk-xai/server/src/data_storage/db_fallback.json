@@ -1,0 +1,1269 @@
+{
+  "users": [
+    {
+      "id": "usr_admin_01",
+      "name": "Dr. Evelyn Reed (Chief Risk Officer)",
+      "email": "admin@demo.com",
+      "passwordHash": "$2a$10$ihAgsrCpv5vdNaNByTb/yOd3C0Seqn9n/BsTjtBY9r.7IhuQTBFyO",
+      "role": "ADMIN",
+      "createdAt": "2026-11-21T18:58:20.963Z"
+    },
+    {
+      "id": "usr_manager_01",
+      "name": "Marcus Vance (Credit Risk Manager)",
+      "email": "manager@demo.com",
+      "passwordHash": "$2a$10$OlljbE8eDlt7yaj6Bxx67.mzFuNweclNFS8Ya5l2RPeruc4xhWTti",
+      "role": "RISK_MANAGER",
+      "createdAt": "2026-11-21T18:58:21.054Z"
+    },
+    {
+      "id": "usr_analyst_01",
+      "name": "Sarah Chen (Senior Credit Analyst)",
+      "email": "analyst@demo.com",
+      "passwordHash": "$2a$10$DGOI55MD2lU5cwNdkY7s1.z42rFoui2RBvbzV85Jhx7lhu/hfLaoi",
+      "role": "ANALYST",
+      "createdAt": "2026-11-21T18:58:21.130Z"
+    },
+    {
+      "id": "usr_1795289820720",
+      "name": "Praveen Kumar",
+      "email": "praveenbalu741@gmail.com",
+      "passwordHash": "$2a$10$xJzPw6kvJfCueaioaGtcl.aYI/BXoOQc6ztbq5P501wRwlk5HlTFa",
+      "role": "RISK_MANAGER",
+      "createdAt": "2026-11-21T19:37:00.720Z"
+    }
+  ],
+  "cases": [
+    {
+      "id": "CASE-521530",
+      "applicant_name": "Jonathan Reynolds",
+      "annual_income": 82000,
+      "loan_amount": 15000,
+      "term_months": 36,
+      "interest_rate": 9.8,
+      "dti": 16.5,
+      "revolving_utilization": 24,
+      "credit_score": 735,
+      "credit_history_years": 12.5,
+      "open_credit_lines": 12,
+      "delinquencies_2yrs": 0,
+      "recent_inquiries": 0,
+      "employment_years": 6,
+      "home_ownership": "MORTGAGE",
+      "notes": "Senior Software Engineer applying for energy-efficiency solar installation loan.",
+      "probability_of_default": 0.0234,
+      "pd_percentage": "2.34%",
+      "risk_band": "Low",
+      "guardrails": {
+        "passed": true,
+        "requires_manual_review": false,
+        "reasons": [],
+        "sanitized_notes": "Senior Software Engineer applying for energy-efficiency solar installation loan.",
+        "injection_detected": false
+      },
+      "shap_explanation": {
+        "base_value": -1.53757,
+        "raw_prediction": -4.19287,
+        "calculated_fx": -4.19287,
+        "additivity_diff": 4.8009199282716963e-8,
+        "additivity_verified": true,
+        "pd_from_shap": 0.0149,
+        "top_positive_drivers": [
+          {
+            "feature": "credit_history_years",
+            "label": "Credit History Length (Years)",
+            "value": 12.5,
+            "shap_value": 0.06359593988629059,
+            "abs_shap": 0.06359593988629059,
+            "direction": "increases_risk"
+          },
+          {
+            "feature": "employment_years",
+            "label": "Employment Stability (Years)",
+            "value": 6,
+            "shap_value": 0.018431761697720504,
+            "abs_shap": 0.018431761697720504,
+            "direction": "increases_risk"
+          },
+          {
+            "feature": "loan_amount",
+            "label": "Requested Loan Amount ($)",
+            "value": 15000,
+            "shap_value": 0.010469124566297979,
+            "abs_shap": 0.010469124566297979,
+            "direction": "increases_risk"
+          }
+        ],
+        "top_negative_drivers": [
+          {
+            "feature": "credit_score",
+            "label": "FICO Credit Score",
+            "value": 735,
+            "shap_value": -1.136086804944207,
+            "abs_shap": 1.136086804944207,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "revolving_utilization",
+            "label": "Revolving Line Utilization (%)",
+            "value": 24,
+            "shap_value": -0.7521167942561442,
+            "abs_shap": 0.7521167942561442,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "recent_inquiries",
+            "label": "Recent Credit Inquiries (6 Mo)",
+            "value": 0,
+            "shap_value": -0.24141021519259084,
+            "abs_shap": 0.24141021519259084,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "dti",
+            "label": "Debt-to-Income Ratio (%)",
+            "value": 16.5,
+            "shap_value": -0.14282547437469476,
+            "abs_shap": 0.14282547437469476,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "interest_rate",
+            "label": "Interest Rate (%)",
+            "value": 9.8,
+            "shap_value": -0.12293727889540605,
+            "abs_shap": 0.12293727889540605,
+            "direction": "decreases_risk"
+          }
+        ],
+        "all_contributions": [
+          {
+            "feature": "credit_score",
+            "label": "FICO Credit Score",
+            "value": 735,
+            "shap_value": -1.136086804944207,
+            "abs_shap": 1.136086804944207,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "revolving_utilization",
+            "label": "Revolving Line Utilization (%)",
+            "value": 24,
+            "shap_value": -0.7521167942561442,
+            "abs_shap": 0.7521167942561442,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "recent_inquiries",
+            "label": "Recent Credit Inquiries (6 Mo)",
+            "value": 0,
+            "shap_value": -0.24141021519259084,
+            "abs_shap": 0.24141021519259084,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "dti",
+            "label": "Debt-to-Income Ratio (%)",
+            "value": 16.5,
+            "shap_value": -0.14282547437469476,
+            "abs_shap": 0.14282547437469476,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "interest_rate",
+            "label": "Interest Rate (%)",
+            "value": 9.8,
+            "shap_value": -0.12293727889540605,
+            "abs_shap": 0.12293727889540605,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "delinquencies_2yrs",
+            "label": "Delinquencies in Past 2 Years",
+            "value": 0,
+            "shap_value": -0.10634159345529043,
+            "abs_shap": 0.10634159345529043,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "credit_history_years",
+            "label": "Credit History Length (Years)",
+            "value": 12.5,
+            "shap_value": 0.06359593988629059,
+            "abs_shap": 0.06359593988629059,
+            "direction": "increases_risk"
+          },
+          {
+            "feature": "installment_to_income",
+            "label": "Installment Burden Ratio",
+            "value": 0.0706,
+            "shap_value": -0.06331693988409824,
+            "abs_shap": 0.06331693988409824,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "installment",
+            "label": "Monthly Installment ($)",
+            "value": 482.6,
+            "shap_value": -0.05675028824363835,
+            "abs_shap": 0.05675028824363835,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "annual_income",
+            "label": "Annual Income ($)",
+            "value": 82000,
+            "shap_value": -0.05508534429231077,
+            "abs_shap": 0.05508534429231077,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "loan_to_income",
+            "label": "Loan-to-Income Ratio",
+            "value": 0.1829,
+            "shap_value": -0.03370260431431234,
+            "abs_shap": 0.03370260431431234,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "home_ownership_RENT",
+            "label": "Home Ownership: Rent",
+            "value": 0,
+            "shap_value": -0.027714158629532904,
+            "abs_shap": 0.027714158629532904,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "employment_years",
+            "label": "Employment Stability (Years)",
+            "value": 6,
+            "shap_value": 0.018431761697720504,
+            "abs_shap": 0.018431761697720504,
+            "direction": "increases_risk"
+          },
+          {
+            "feature": "loan_amount",
+            "label": "Requested Loan Amount ($)",
+            "value": 15000,
+            "shap_value": 0.010469124566297979,
+            "abs_shap": 0.010469124566297979,
+            "direction": "increases_risk"
+          },
+          {
+            "feature": "open_credit_lines",
+            "label": "Open Credit Lines",
+            "value": 12,
+            "shap_value": -0.004846863118582405,
+            "abs_shap": 0.004846863118582405,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "term_months",
+            "label": "Loan Term (Months)",
+            "value": 36,
+            "shap_value": -0.0036577193113043905,
+            "abs_shap": 0.0036577193113043905,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "home_ownership_OWN",
+            "label": "Home Ownership: Own",
+            "value": 0,
+            "shap_value": -0.0009816690348088742,
+            "abs_shap": 0.0009816690348088742,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "home_ownership_MORTGAGE",
+            "label": "Home Ownership: Mortgage",
+            "value": 1,
+            "shap_value": -0.00001934516476467252,
+            "abs_shap": 0.00001934516476467252,
+            "direction": "decreases_risk"
+          }
+        ]
+      },
+      "policy": {
+        "policy_version": "POL-2026.1",
+        "is_compliant": true,
+        "verdict": "COMPLIANT",
+        "total_checks": 6,
+        "passed_checks": 6,
+        "failed_checks": 0,
+        "clauses": [
+          {
+            "clause_id": "POL-DTI-01",
+            "name": "Maximum Debt-to-Income Ratio",
+            "feature": "dti",
+            "actual_value": 16.5,
+            "threshold": 43,
+            "condition": "<= 43.0",
+            "passed": true,
+            "severity": "CRITICAL",
+            "description": "Debt-to-Income (DTI) ratio must not exceed 43.0% (QM lending threshold)"
+          },
+          {
+            "clause_id": "POL-CS-02",
+            "name": "Minimum Credit Score Floor",
+            "feature": "credit_score",
+            "actual_value": 735,
+            "threshold": 600,
+            "condition": ">= 600.0",
+            "passed": true,
+            "severity": "CRITICAL",
+            "description": "Applicant FICO credit score must be at or above 600"
+          },
+          {
+            "clause_id": "POL-DELINQ-03",
+            "name": "Delinquency Recency Threshold",
+            "feature": "delinquencies_2yrs",
+            "actual_value": 0,
+            "threshold": 1,
+            "condition": "<= 1.0",
+            "passed": true,
+            "severity": "MAJOR",
+            "description": "No more than 1 delinquency event in the past 24 months"
+          },
+          {
+            "clause_id": "POL-LTI-04",
+            "name": "Loan-to-Income Exposure Cap",
+            "feature": "loan_to_income",
+            "actual_value": 0.18,
+            "threshold": 0.5,
+            "condition": "<= 0.5",
+            "passed": true,
+            "severity": "MAJOR",
+            "description": "Requested loan amount should not exceed 50% of annual gross income"
+          },
+          {
+            "clause_id": "POL-UTIL-05",
+            "name": "Revolving Credit Line Utilization Cap",
+            "feature": "revolving_utilization",
+            "actual_value": 24,
+            "threshold": 80,
+            "condition": "<= 80.0",
+            "passed": true,
+            "severity": "MODERATE",
+            "description": "Revolving line utilization should remain below 80.0%"
+          },
+          {
+            "clause_id": "POL-INQ-06",
+            "name": "Velocity of Recent Credit Inquiries",
+            "feature": "recent_inquiries",
+            "actual_value": 0,
+            "threshold": 3,
+            "condition": "<= 3.0",
+            "passed": true,
+            "severity": "MODERATE",
+            "description": "Excessive recent credit inquiries (greater than 3) signal credit distress"
+          }
+        ],
+        "failed_clauses": []
+      },
+      "counterfactual": {
+        "eligible_without_changes": true,
+        "original_pd": 0.0234,
+        "target_pd": 0.24,
+        "recourse_plans": [],
+        "message": "Applicant already satisfies target probability of default threshold."
+      },
+      "underwriting_memo": {
+        "memo": "### SECTION 1: EXECUTIVE RISK SUMMARY\nThe applicant has requested a loan of $15,000.00 over a 36-month term against an annual income of $82,000.00. The machine learning risk assessment estimates the applicant's Probability of Default (PD) at 2.34% (0.0234), categorizing this exposure into the **LOW RISK** tier (Thresholds: Low < 25.00%, Moderate 25.00%-49.99%, High >= 50.00%). Underwriting policy evaluation indicates the portfolio status is **COMPLIANT**, with 6 of 6 underwriting clauses satisfied.\n\n### SECTION 2: KEY RISK DRIVERS (EXACT SHAP IMPACT)\nThe model's baseline log-odds expectation is -1.5376, and the cumulative feature contribution brings the final margin score to -4.1929. The primary adverse factors elevating credit risk are:\n- **Credit History Length (Years)**: Actual value of 12.5, contributing a SHAP risk shift of +0.0636 to the log-odds margin.\n- **Employment Stability (Years)**: Actual value of 6.0, contributing a SHAP risk shift of +0.0184 to the log-odds margin.\n- **Requested Loan Amount ($)**: Actual value of 15000.0, contributing a SHAP risk shift of +0.0105 to the log-odds margin.\nTreeSHAP strict additivity has been mathematically validated (|f(x) - (base + sum(phi))| < 1e-4), confirming zero feature attribution leakage.\n\n### SECTION 3: MITIGATING STRENGTHS & CREDIT ANCHORS\nOffsetting the adverse risk factors are key applicant credit strengths that pull the default probability downward:\n- **FICO Credit Score**: Strong positive metric of 735.0, providing a protective SHAP offset of -1.1361.\n- **Revolving Line Utilization (%)**: Strong positive metric of 24.0, providing a protective SHAP offset of -0.7521.\n- **Recent Credit Inquiries (6 Mo)**: Strong positive metric of 0.0, providing a protective SHAP offset of -0.2414.\n- **Debt-to-Income Ratio (%)**: Strong positive metric of 16.5, providing a protective SHAP offset of -0.1428.\n- **Interest Rate (%)**: Strong positive metric of 9.8, providing a protective SHAP offset of -0.1229.\nThese attributes substantiate repayment capability and mitigate downside portfolio volatility.\n\n### SECTION 4: POLICY ALIGNMENT & COUNTERFACTUAL GUIDANCE\nAll institutional policy criteria (DTI cap 43.00%, Credit Score floor 600, Delinquency limits) are fully satisfied.\n\n**Actionable Counterfactual Recourse (Mutable Attributes Only):**\n- Applicant already meets benchmark target risk threshold without required restructuring.\n\nImmutable historical records (delinquencies, credit age) remain locked. Implementation of the recommended adjustments qualifies the application for credit re-rating.",
+        "grounding_rate": 0.9091,
+        "grounding_percentage": "90.9%",
+        "grounded_numbers_count": 30,
+        "ungrounded_numbers_count": 3,
+        "llm_provider": "deterministic_template",
+        "verified_payload_summary": {
+          "pd": 0.023419650969129343,
+          "risk_band": "Low",
+          "policy_verdict": "COMPLIANT"
+        }
+      },
+      "modelVersion": "LGBM-V1-20261122",
+      "policyVersion": "POL-2026.1",
+      "assessedBy": "admin@demo.com",
+      "latency_ms": 194.88,
+      "createdAt": "2026-11-25T04:38:41.530Z"
+    },
+    {
+      "id": "CASE-490270",
+      "applicant_name": "Elena Rostova (Viva Test)",
+      "annual_income": 85000,
+      "loan_amount": 15000,
+      "term_months": 36,
+      "interest_rate": 9.5,
+      "dti": 17,
+      "revolving_utilization": 25,
+      "credit_score": 740,
+      "credit_history_years": 12,
+      "open_credit_lines": 10,
+      "delinquencies_2yrs": 0,
+      "recent_inquiries": 0,
+      "employment_years": 6,
+      "home_ownership": "MORTGAGE",
+      "notes": "Senior engineer with pristine repayment track record.",
+      "probability_of_default": 0.0249,
+      "pd_percentage": "2.49%",
+      "risk_band": "Low",
+      "guardrails": {
+        "passed": true,
+        "requires_manual_review": false,
+        "reasons": [],
+        "sanitized_notes": "Senior engineer with pristine repayment track record.",
+        "injection_detected": false
+      },
+      "shap_explanation": {
+        "base_value": -1.53757,
+        "raw_prediction": -4.40243,
+        "calculated_fx": -4.40243,
+        "additivity_diff": 5.060465912976042e-8,
+        "additivity_verified": true,
+        "pd_from_shap": 0.0121,
+        "top_positive_drivers": [
+          {
+            "feature": "credit_history_years",
+            "label": "Credit History Length (Years)",
+            "value": 12,
+            "shap_value": 0.029163699778728187,
+            "abs_shap": 0.029163699778728187,
+            "direction": "increases_risk"
+          },
+          {
+            "feature": "home_ownership_MORTGAGE",
+            "label": "Home Ownership: Mortgage",
+            "value": 1,
+            "shap_value": 0.02011427328689024,
+            "abs_shap": 0.02011427328689024,
+            "direction": "increases_risk"
+          },
+          {
+            "feature": "employment_years",
+            "label": "Employment Stability (Years)",
+            "value": 6,
+            "shap_value": 0.016853788536827778,
+            "abs_shap": 0.016853788536827778,
+            "direction": "increases_risk"
+          },
+          {
+            "feature": "loan_amount",
+            "label": "Requested Loan Amount ($)",
+            "value": 15000,
+            "shap_value": 0.010469124566297979,
+            "abs_shap": 0.010469124566297979,
+            "direction": "increases_risk"
+          }
+        ],
+        "top_negative_drivers": [
+          {
+            "feature": "credit_score",
+            "label": "FICO Credit Score",
+            "value": 740,
+            "shap_value": -1.170798425191024,
+            "abs_shap": 1.170798425191024,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "revolving_utilization",
+            "label": "Revolving Line Utilization (%)",
+            "value": 25,
+            "shap_value": -0.7217520416976185,
+            "abs_shap": 0.7217520416976185,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "interest_rate",
+            "label": "Interest Rate (%)",
+            "value": 9.5,
+            "shap_value": -0.290327618814772,
+            "abs_shap": 0.290327618814772,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "recent_inquiries",
+            "label": "Recent Credit Inquiries (6 Mo)",
+            "value": 0,
+            "shap_value": -0.22795562937797512,
+            "abs_shap": 0.22795562937797512,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "dti",
+            "label": "Debt-to-Income Ratio (%)",
+            "value": 17,
+            "shap_value": -0.1337345933902543,
+            "abs_shap": 0.1337345933902543,
+            "direction": "decreases_risk"
+          }
+        ],
+        "all_contributions": [
+          {
+            "feature": "credit_score",
+            "label": "FICO Credit Score",
+            "value": 740,
+            "shap_value": -1.170798425191024,
+            "abs_shap": 1.170798425191024,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "revolving_utilization",
+            "label": "Revolving Line Utilization (%)",
+            "value": 25,
+            "shap_value": -0.7217520416976185,
+            "abs_shap": 0.7217520416976185,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "interest_rate",
+            "label": "Interest Rate (%)",
+            "value": 9.5,
+            "shap_value": -0.290327618814772,
+            "abs_shap": 0.290327618814772,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "recent_inquiries",
+            "label": "Recent Credit Inquiries (6 Mo)",
+            "value": 0,
+            "shap_value": -0.22795562937797512,
+            "abs_shap": 0.22795562937797512,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "dti",
+            "label": "Debt-to-Income Ratio (%)",
+            "value": 17,
+            "shap_value": -0.1337345933902543,
+            "abs_shap": 0.1337345933902543,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "delinquencies_2yrs",
+            "label": "Delinquencies in Past 2 Years",
+            "value": 0,
+            "shap_value": -0.11798376680584624,
+            "abs_shap": 0.11798376680584624,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "annual_income",
+            "label": "Annual Income ($)",
+            "value": 85000,
+            "shap_value": -0.09459599309237092,
+            "abs_shap": 0.09459599309237092,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "installment_to_income",
+            "label": "Installment Burden Ratio",
+            "value": 0.0678,
+            "shap_value": -0.06999208144494333,
+            "abs_shap": 0.06999208144494333,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "installment",
+            "label": "Monthly Installment ($)",
+            "value": 480.49,
+            "shap_value": -0.06383347086259164,
+            "abs_shap": 0.06383347086259164,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "credit_history_years",
+            "label": "Credit History Length (Years)",
+            "value": 12,
+            "shap_value": 0.029163699778728187,
+            "abs_shap": 0.029163699778728187,
+            "direction": "increases_risk"
+          },
+          {
+            "feature": "loan_to_income",
+            "label": "Loan-to-Income Ratio",
+            "value": 0.1765,
+            "shap_value": -0.023442322683986275,
+            "abs_shap": 0.023442322683986275,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "home_ownership_MORTGAGE",
+            "label": "Home Ownership: Mortgage",
+            "value": 1,
+            "shap_value": 0.02011427328689024,
+            "abs_shap": 0.02011427328689024,
+            "direction": "increases_risk"
+          },
+          {
+            "feature": "employment_years",
+            "label": "Employment Stability (Years)",
+            "value": 6,
+            "shap_value": 0.016853788536827778,
+            "abs_shap": 0.016853788536827778,
+            "direction": "increases_risk"
+          },
+          {
+            "feature": "open_credit_lines",
+            "label": "Open Credit Lines",
+            "value": 10,
+            "shap_value": -0.013456394456443376,
+            "abs_shap": 0.013456394456443376,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "loan_amount",
+            "label": "Requested Loan Amount ($)",
+            "value": 15000,
+            "shap_value": 0.010469124566297979,
+            "abs_shap": 0.010469124566297979,
+            "direction": "increases_risk"
+          },
+          {
+            "feature": "home_ownership_RENT",
+            "label": "Home Ownership: Rent",
+            "value": 0,
+            "shap_value": -0.00894933014875278,
+            "abs_shap": 0.00894933014875278,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "term_months",
+            "label": "Loan Term (Months)",
+            "value": 36,
+            "shap_value": -0.0036577193113043905,
+            "abs_shap": 0.0036577193113043905,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "home_ownership_OWN",
+            "label": "Home Ownership: Own",
+            "value": 0,
+            "shap_value": -0.0009816690348088742,
+            "abs_shap": 0.0009816690348088742,
+            "direction": "decreases_risk"
+          }
+        ]
+      },
+      "policy": {
+        "policy_version": "POL-2026.1",
+        "is_compliant": true,
+        "verdict": "COMPLIANT",
+        "total_checks": 6,
+        "passed_checks": 6,
+        "failed_checks": 0,
+        "clauses": [
+          {
+            "clause_id": "POL-DTI-01",
+            "name": "Maximum Debt-to-Income Ratio",
+            "feature": "dti",
+            "actual_value": 17,
+            "threshold": 43,
+            "condition": "<= 43.0",
+            "passed": true,
+            "severity": "CRITICAL",
+            "description": "Debt-to-Income (DTI) ratio must not exceed 43.0% (QM lending threshold)"
+          },
+          {
+            "clause_id": "POL-CS-02",
+            "name": "Minimum Credit Score Floor",
+            "feature": "credit_score",
+            "actual_value": 740,
+            "threshold": 600,
+            "condition": ">= 600.0",
+            "passed": true,
+            "severity": "CRITICAL",
+            "description": "Applicant FICO credit score must be at or above 600"
+          },
+          {
+            "clause_id": "POL-DELINQ-03",
+            "name": "Delinquency Recency Threshold",
+            "feature": "delinquencies_2yrs",
+            "actual_value": 0,
+            "threshold": 1,
+            "condition": "<= 1.0",
+            "passed": true,
+            "severity": "MAJOR",
+            "description": "No more than 1 delinquency event in the past 24 months"
+          },
+          {
+            "clause_id": "POL-LTI-04",
+            "name": "Loan-to-Income Exposure Cap",
+            "feature": "loan_to_income",
+            "actual_value": 0.18,
+            "threshold": 0.5,
+            "condition": "<= 0.5",
+            "passed": true,
+            "severity": "MAJOR",
+            "description": "Requested loan amount should not exceed 50% of annual gross income"
+          },
+          {
+            "clause_id": "POL-UTIL-05",
+            "name": "Revolving Credit Line Utilization Cap",
+            "feature": "revolving_utilization",
+            "actual_value": 25,
+            "threshold": 80,
+            "condition": "<= 80.0",
+            "passed": true,
+            "severity": "MODERATE",
+            "description": "Revolving line utilization should remain below 80.0%"
+          },
+          {
+            "clause_id": "POL-INQ-06",
+            "name": "Velocity of Recent Credit Inquiries",
+            "feature": "recent_inquiries",
+            "actual_value": 0,
+            "threshold": 3,
+            "condition": "<= 3.0",
+            "passed": true,
+            "severity": "MODERATE",
+            "description": "Excessive recent credit inquiries (greater than 3) signal credit distress"
+          }
+        ],
+        "failed_clauses": []
+      },
+      "counterfactual": {
+        "eligible_without_changes": true,
+        "original_pd": 0.0249,
+        "target_pd": 0.24,
+        "recourse_plans": [],
+        "message": "Applicant already satisfies target probability of default threshold."
+      },
+      "underwriting_memo": {
+        "memo": "### SECTION 1: EXECUTIVE RISK SUMMARY\nThe applicant has requested a loan of $15,000.00 over a 36-month term against an annual income of $85,000.00. The machine learning risk assessment estimates the applicant's Probability of Default (PD) at 2.49% (0.0249), categorizing this exposure into the **LOW RISK** tier (Thresholds: Low < 25.00%, Moderate 25.00%-49.99%, High >= 50.00%). Underwriting policy evaluation indicates the portfolio status is **COMPLIANT**, with 6 of 6 underwriting clauses satisfied.\n\n### SECTION 2: KEY RISK DRIVERS (EXACT SHAP IMPACT)\nThe model's baseline log-odds expectation is -1.5376, and the cumulative feature contribution brings the final margin score to -4.4024. The primary adverse factors elevating credit risk are:\n- **Credit History Length (Years)**: Actual value of 12.0, contributing a SHAP risk shift of +0.0292 to the log-odds margin.\n- **Home Ownership: Mortgage**: Actual value of 1.0, contributing a SHAP risk shift of +0.0201 to the log-odds margin.\n- **Employment Stability (Years)**: Actual value of 6.0, contributing a SHAP risk shift of +0.0169 to the log-odds margin.\n- **Requested Loan Amount ($)**: Actual value of 15000.0, contributing a SHAP risk shift of +0.0105 to the log-odds margin.\nTreeSHAP strict additivity has been mathematically validated (|f(x) - (base + sum(phi))| < 1e-4), confirming zero feature attribution leakage.\n\n### SECTION 3: MITIGATING STRENGTHS & CREDIT ANCHORS\nOffsetting the adverse risk factors are key applicant credit strengths that pull the default probability downward:\n- **FICO Credit Score**: Strong positive metric of 740.0, providing a protective SHAP offset of -1.1708.\n- **Revolving Line Utilization (%)**: Strong positive metric of 25.0, providing a protective SHAP offset of -0.7218.\n- **Interest Rate (%)**: Strong positive metric of 9.5, providing a protective SHAP offset of -0.2903.\n- **Recent Credit Inquiries (6 Mo)**: Strong positive metric of 0.0, providing a protective SHAP offset of -0.2280.\n- **Debt-to-Income Ratio (%)**: Strong positive metric of 17.0, providing a protective SHAP offset of -0.1337.\nThese attributes substantiate repayment capability and mitigate downside portfolio volatility.\n\n### SECTION 4: POLICY ALIGNMENT & COUNTERFACTUAL GUIDANCE\nAll institutional policy criteria (DTI cap 43.00%, Credit Score floor 600, Delinquency limits) are fully satisfied.\n\n**Actionable Counterfactual Recourse (Mutable Attributes Only):**\n- Applicant already meets benchmark target risk threshold without required restructuring.\n\nImmutable historical records (delinquencies, credit age) remain locked. Implementation of the recommended adjustments qualifies the application for credit re-rating.",
+        "grounding_rate": 0.9706,
+        "grounding_percentage": "97.1%",
+        "grounded_numbers_count": 33,
+        "ungrounded_numbers_count": 1,
+        "llm_provider": "deterministic_template",
+        "verified_payload_summary": {
+          "pd": 0.02492265647182874,
+          "risk_band": "Low",
+          "policy_verdict": "COMPLIANT"
+        }
+      },
+      "modelVersion": "LGBM-V1-20261122",
+      "policyVersion": "POL-2026.1",
+      "assessedBy": "admin@demo.com",
+      "latency_ms": 278.05,
+      "createdAt": "2026-11-21T19:48:10.270Z"
+    },
+    {
+      "id": "CASE-663963",
+      "credit_score": 740,
+      "open_credit_lines": 11,
+      "loan_amount": 18000,
+      "applicant_name": "Dr. Arthur Pendelton",
+      "revolving_utilization": 28,
+      "credit_history_years": 14,
+      "notes": "VP of Engineering with stable 7-year track record.",
+      "annual_income": 92000,
+      "term_months": 36,
+      "interest_rate": 9.2,
+      "dti": 18.5,
+      "delinquencies_2yrs": 0,
+      "home_ownership": "MORTGAGE",
+      "recent_inquiries": 0,
+      "employment_years": 7,
+      "probability_of_default": 0.0329,
+      "pd_percentage": "3.29%",
+      "risk_band": "Low",
+      "guardrails": {
+        "passed": true,
+        "requires_manual_review": false,
+        "reasons": [],
+        "sanitized_notes": "VP of Engineering with stable 7-year track record.",
+        "injection_detected": false
+      },
+      "shap_explanation": {
+        "base_value": -1.53757,
+        "raw_prediction": -3.88218,
+        "calculated_fx": -3.88218,
+        "additivity_diff": 5.1475667284250903e-8,
+        "additivity_verified": true,
+        "pd_from_shap": 0.0202,
+        "top_positive_drivers": [
+          {
+            "feature": "dti",
+            "label": "Debt-to-Income Ratio (%)",
+            "value": 18.5,
+            "shap_value": 0.09024900485645049,
+            "abs_shap": 0.09024900485645049,
+            "direction": "increases_risk"
+          },
+          {
+            "feature": "home_ownership_MORTGAGE",
+            "label": "Home Ownership: Mortgage",
+            "value": 1,
+            "shap_value": 0.023592275590635835,
+            "abs_shap": 0.023592275590635835,
+            "direction": "increases_risk"
+          },
+          {
+            "feature": "loan_amount",
+            "label": "Requested Loan Amount ($)",
+            "value": 18000,
+            "shap_value": 0.016143977849860675,
+            "abs_shap": 0.016143977849860675,
+            "direction": "increases_risk"
+          }
+        ],
+        "top_negative_drivers": [
+          {
+            "feature": "credit_score",
+            "label": "FICO Credit Score",
+            "value": 740,
+            "shap_value": -1.0734374829864828,
+            "abs_shap": 1.0734374829864828,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "revolving_utilization",
+            "label": "Revolving Line Utilization (%)",
+            "value": 28,
+            "shap_value": -0.5027863438066561,
+            "abs_shap": 0.5027863438066561,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "interest_rate",
+            "label": "Interest Rate (%)",
+            "value": 9.2,
+            "shap_value": -0.24531195079442114,
+            "abs_shap": 0.24531195079442114,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "recent_inquiries",
+            "label": "Recent Credit Inquiries (6 Mo)",
+            "value": 0,
+            "shap_value": -0.23026440273853951,
+            "abs_shap": 0.23026440273853951,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "delinquencies_2yrs",
+            "label": "Delinquencies in Past 2 Years",
+            "value": 0,
+            "shap_value": -0.1349456330947578,
+            "abs_shap": 0.1349456330947578,
+            "direction": "decreases_risk"
+          }
+        ],
+        "all_contributions": [
+          {
+            "feature": "credit_score",
+            "label": "FICO Credit Score",
+            "value": 740,
+            "shap_value": -1.0734374829864828,
+            "abs_shap": 1.0734374829864828,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "revolving_utilization",
+            "label": "Revolving Line Utilization (%)",
+            "value": 28,
+            "shap_value": -0.5027863438066561,
+            "abs_shap": 0.5027863438066561,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "interest_rate",
+            "label": "Interest Rate (%)",
+            "value": 9.2,
+            "shap_value": -0.24531195079442114,
+            "abs_shap": 0.24531195079442114,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "recent_inquiries",
+            "label": "Recent Credit Inquiries (6 Mo)",
+            "value": 0,
+            "shap_value": -0.23026440273853951,
+            "abs_shap": 0.23026440273853951,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "delinquencies_2yrs",
+            "label": "Delinquencies in Past 2 Years",
+            "value": 0,
+            "shap_value": -0.1349456330947578,
+            "abs_shap": 0.1349456330947578,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "installment_to_income",
+            "label": "Installment Burden Ratio",
+            "value": 0.0749,
+            "shap_value": -0.10347763833939098,
+            "abs_shap": 0.10347763833939098,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "dti",
+            "label": "Debt-to-Income Ratio (%)",
+            "value": 18.5,
+            "shap_value": 0.09024900485645049,
+            "abs_shap": 0.09024900485645049,
+            "direction": "increases_risk"
+          },
+          {
+            "feature": "annual_income",
+            "label": "Annual Income ($)",
+            "value": 92000,
+            "shap_value": -0.06616416553719319,
+            "abs_shap": 0.06616416553719319,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "installment",
+            "label": "Monthly Installment ($)",
+            "value": 574.07,
+            "shap_value": -0.03385145289939828,
+            "abs_shap": 0.03385145289939828,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "loan_to_income",
+            "label": "Loan-to-Income Ratio",
+            "value": 0.1957,
+            "shap_value": -0.027060093870386482,
+            "abs_shap": 0.027060093870386482,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "home_ownership_MORTGAGE",
+            "label": "Home Ownership: Mortgage",
+            "value": 1,
+            "shap_value": 0.023592275590635835,
+            "abs_shap": 0.023592275590635835,
+            "direction": "increases_risk"
+          },
+          {
+            "feature": "credit_history_years",
+            "label": "Credit History Length (Years)",
+            "value": 14,
+            "shap_value": -0.022235823014052584,
+            "abs_shap": 0.022235823014052584,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "employment_years",
+            "label": "Employment Stability (Years)",
+            "value": 7,
+            "shap_value": -0.02101855042972602,
+            "abs_shap": 0.02101855042972602,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "loan_amount",
+            "label": "Requested Loan Amount ($)",
+            "value": 18000,
+            "shap_value": 0.016143977849860675,
+            "abs_shap": 0.016143977849860675,
+            "direction": "increases_risk"
+          },
+          {
+            "feature": "open_credit_lines",
+            "label": "Open Credit Lines",
+            "value": 11,
+            "shap_value": -0.009835395506233907,
+            "abs_shap": 0.009835395506233907,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "term_months",
+            "label": "Loan Term (Months)",
+            "value": 36,
+            "shap_value": -0.0019088830053806305,
+            "abs_shap": 0.0019088830053806305,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "home_ownership_RENT",
+            "label": "Home Ownership: Rent",
+            "value": 0,
+            "shap_value": -0.0013088578684255481,
+            "abs_shap": 0.0013088578684255481,
+            "direction": "decreases_risk"
+          },
+          {
+            "feature": "home_ownership_OWN",
+            "label": "Home Ownership: Own",
+            "value": 0,
+            "shap_value": -0.0009816690348088742,
+            "abs_shap": 0.0009816690348088742,
+            "direction": "decreases_risk"
+          }
+        ]
+      },
+      "policy": {
+        "policy_version": "POL-2026.1",
+        "is_compliant": true,
+        "verdict": "COMPLIANT",
+        "total_checks": 6,
+        "passed_checks": 6,
+        "failed_checks": 0,
+        "clauses": [
+          {
+            "clause_id": "POL-DTI-01",
+            "name": "Maximum Debt-to-Income Ratio",
+            "feature": "dti",
+            "actual_value": 18.5,
+            "threshold": 43,
+            "condition": "<= 43.0",
+            "passed": true,
+            "severity": "CRITICAL",
+            "description": "Debt-to-Income (DTI) ratio must not exceed 43.0% (QM lending threshold)"
+          },
+          {
+            "clause_id": "POL-CS-02",
+            "name": "Minimum Credit Score Floor",
+            "feature": "credit_score",
+            "actual_value": 740,
+            "threshold": 600,
+            "condition": ">= 600.0",
+            "passed": true,
+            "severity": "CRITICAL",
+            "description": "Applicant FICO credit score must be at or above 600"
+          },
+          {
+            "clause_id": "POL-DELINQ-03",
+            "name": "Delinquency Recency Threshold",
+            "feature": "delinquencies_2yrs",
+            "actual_value": 0,
+            "threshold": 1,
+            "condition": "<= 1.0",
+            "passed": true,
+            "severity": "MAJOR",
+            "description": "No more than 1 delinquency event in the past 24 months"
+          },
+          {
+            "clause_id": "POL-LTI-04",
+            "name": "Loan-to-Income Exposure Cap",
+            "feature": "loan_to_income",
+            "actual_value": 0.2,
+            "threshold": 0.5,
+            "condition": "<= 0.5",
+            "passed": true,
+            "severity": "MAJOR",
+            "description": "Requested loan amount should not exceed 50% of annual gross income"
+          },
+          {
+            "clause_id": "POL-UTIL-05",
+            "name": "Revolving Credit Line Utilization Cap",
+            "feature": "revolving_utilization",
+            "actual_value": 28,
+            "threshold": 80,
+            "condition": "<= 80.0",
+            "passed": true,
+            "severity": "MODERATE",
+            "description": "Revolving line utilization should remain below 80.0%"
+          },
+          {
+            "clause_id": "POL-INQ-06",
+            "name": "Velocity of Recent Credit Inquiries",
+            "feature": "recent_inquiries",
+            "actual_value": 0,
+            "threshold": 3,
+            "condition": "<= 3.0",
+            "passed": true,
+            "severity": "MODERATE",
+            "description": "Excessive recent credit inquiries (greater than 3) signal credit distress"
+          }
+        ],
+        "failed_clauses": []
+      },
+      "counterfactual": {
+        "eligible_without_changes": true,
+        "original_pd": 0.0329,
+        "target_pd": 0.24,
+        "recourse_plans": [],
+        "message": "Applicant already satisfies target probability of default threshold."
+      },
+      "underwriting_memo": {
+        "memo": "### SECTION 1: EXECUTIVE RISK SUMMARY\nThe applicant has requested a loan of $18,000.00 over a 36-month term against an annual income of $92,000.00. The machine learning risk assessment estimates the applicant's Probability of Default (PD) at 3.29% (0.0329), categorizing this exposure into the **LOW RISK** tier (Thresholds: Low < 25.00%, Moderate 25.00%-49.99%, High >= 50.00%). Underwriting policy evaluation indicates the portfolio status is **COMPLIANT**, with 6 of 6 underwriting clauses satisfied.\n\n### SECTION 2: KEY RISK DRIVERS (EXACT SHAP IMPACT)\nThe model's baseline log-odds expectation is -1.5376, and the cumulative feature contribution brings the final margin score to -3.8822. The primary adverse factors elevating credit risk are:\n- **Debt-to-Income Ratio (%)**: Actual value of 18.5, contributing a SHAP risk shift of +0.0902 to the log-odds margin.\n- **Home Ownership: Mortgage**: Actual value of 1.0, contributing a SHAP risk shift of +0.0236 to the log-odds margin.\n- **Requested Loan Amount ($)**: Actual value of 18000.0, contributing a SHAP risk shift of +0.0161 to the log-odds margin.\nTreeSHAP strict additivity has been mathematically validated (|f(x) - (base + sum(phi))| < 1e-4), confirming zero feature attribution leakage.\n\n### SECTION 3: MITIGATING STRENGTHS & CREDIT ANCHORS\nOffsetting the adverse risk factors are key applicant credit strengths that pull the default probability downward:\n- **FICO Credit Score**: Strong positive metric of 740.0, providing a protective SHAP offset of -1.0734.\n- **Revolving Line Utilization (%)**: Strong positive metric of 28.0, providing a protective SHAP offset of -0.5028.\n- **Interest Rate (%)**: Strong positive metric of 9.2, providing a protective SHAP offset of -0.2453.\n- **Recent Credit Inquiries (6 Mo)**: Strong positive metric of 0.0, providing a protective SHAP offset of -0.2303.\n- **Delinquencies in Past 2 Years**: Strong positive metric of 0.0, providing a protective SHAP offset of -0.1349.\nThese attributes substantiate repayment capability and mitigate downside portfolio volatility.\n\n### SECTION 4: POLICY ALIGNMENT & COUNTERFACTUAL GUIDANCE\nAll institutional policy criteria (DTI cap 43.00%, Credit Score floor 600, Delinquency limits) are fully satisfied.\n\n**Actionable Counterfactual Recourse (Mutable Attributes Only):**\n- Applicant already meets benchmark target risk threshold without required restructuring.\n\nImmutable historical records (delinquencies, credit age) remain locked. Implementation of the recommended adjustments qualifies the application for credit re-rating.",
+        "grounding_rate": 0.9688,
+        "grounding_percentage": "96.9%",
+        "grounded_numbers_count": 31,
+        "ungrounded_numbers_count": 1,
+        "llm_provider": "deterministic_template",
+        "verified_payload_summary": {
+          "pd": 0.0328848372415872,
+          "risk_band": "Low",
+          "policy_verdict": "COMPLIANT"
+        }
+      },
+      "modelVersion": "LGBM-V1-20261122",
+      "policyVersion": "POL-2026.1",
+      "assessedBy": "admin@demo.com",
+      "latency_ms": 107.12,
+      "createdAt": "2026-11-21T19:01:03.963Z"
+    },
+    {
+      "id": "CASE-2026-001",
+      "applicant_name": "Johnathan Miller",
+      "annual_income": 85000,
+      "loan_amount": 15000,
+      "term_months": 36,
+      "interest_rate": 8.5,
+      "credit_score": 745,
+      "dti": 14.5,
+      "revolving_utilization": 22,
+      "delinquencies_2yrs": 0,
+      "recent_inquiries": 0,
+      "probability_of_default": 0.0842,
+      "risk_band": "Low",
+      "policy_verdict": "COMPLIANT",
+      "modelVersion": "LGBM-V1-20261122",
+      "policyVersion": "POL-2026.1",
+      "assessedBy": "admin@demo.com",
+      "createdAt": "2026-11-21T14:58:21.130Z"
+    },
+    {
+      "id": "CASE-2026-002",
+      "applicant_name": "Elena Rostova",
+      "annual_income": 48000,
+      "loan_amount": 18000,
+      "term_months": 60,
+      "interest_rate": 16.2,
+      "credit_score": 630,
+      "dti": 38.2,
+      "revolving_utilization": 68.5,
+      "delinquencies_2yrs": 1,
+      "recent_inquiries": 2,
+      "probability_of_default": 0.365,
+      "risk_band": "Moderate",
+      "policy_verdict": "COMPLIANT",
+      "modelVersion": "LGBM-V1-20261122",
+      "policyVersion": "POL-2026.1",
+      "assessedBy": "analyst@demo.com",
+      "createdAt": "2026-11-21T16:58:21.130Z"
+    },
+    {
+      "id": "CASE-2026-003",
+      "applicant_name": "David K. Henderson",
+      "annual_income": 38000,
+      "loan_amount": 25000,
+      "term_months": 60,
+      "interest_rate": 24.5,
+      "credit_score": 560,
+      "dti": 48,
+      "revolving_utilization": 89,
+      "delinquencies_2yrs": 3,
+      "recent_inquiries": 4,
+      "probability_of_default": 0.684,
+      "risk_band": "High",
+      "policy_verdict": "MANUAL_REVIEW",
+      "modelVersion": "LGBM-V1-20261122",
+      "policyVersion": "POL-2026.1",
+      "assessedBy": "manager@demo.com",
+      "createdAt": "2026-11-21T18:28:21.130Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "AUD-1795581521537-647",
+      "timestamp": "2026-11-25T04:38:41.537Z",
+      "action": "RISK_ASSESSMENT_COMPLETED",
+      "caseId": "CASE-521530",
+      "details": "Applicant evaluated with PD: 2.34% (Low Risk). Policy verdict: COMPLIANT.",
+      "user": "admin@demo.com",
+      "modelVersion": "LGBM-V1-20261122",
+      "policyVersion": "POL-2026.1"
+    },
+    {
+      "id": "AUD-1795579998697-394",
+      "timestamp": "2026-11-25T04:13:18.697Z",
+      "action": "USER_LOGIN",
+      "details": "User admin@demo.com logged in with role ADMIN.",
+      "user": "admin@demo.com",
+      "modelVersion": "N/A",
+      "policyVersion": "N/A"
+    },
+    {
+      "id": "AUD-1795290490535-387",
+      "timestamp": "2026-11-21T19:48:10.535Z",
+      "action": "BATCH_PORTFOLIO_SCORING",
+      "details": "Batch evaluated 10 records. Portfolio avg PD: 36.65%.",
+      "user": "admin@demo.com",
+      "modelVersion": "LGBM-V1-20261122",
+      "policyVersion": "POL-2026.1"
+    },
+    {
+      "id": "AUD-1795290490276-948",
+      "timestamp": "2026-11-21T19:48:10.276Z",
+      "action": "RISK_ASSESSMENT_COMPLETED",
+      "caseId": "CASE-490270",
+      "details": "Applicant evaluated with PD: 2.49% (Low Risk). Policy verdict: COMPLIANT.",
+      "user": "admin@demo.com",
+      "modelVersion": "LGBM-V1-20261122",
+      "policyVersion": "POL-2026.1"
+    },
+    {
+      "id": "AUD-1795290489910-527",
+      "timestamp": "2026-11-21T19:48:09.911Z",
+      "action": "USER_LOGIN",
+      "details": "User admin@demo.com logged in with role ADMIN.",
+      "user": "admin@demo.com",
+      "modelVersion": "N/A",
+      "policyVersion": "N/A"
+    },
+    {
+      "id": "AUD-1795289770731-119",
+      "timestamp": "2026-11-21T19:36:10.731Z",
+      "action": "USER_LOGIN",
+      "details": "User manager@demo.com logged in with role RISK_MANAGER.",
+      "user": "manager@demo.com",
+      "modelVersion": "N/A",
+      "policyVersion": "N/A"
+    },
+    {
+      "id": "AUD-1795289724164-568",
+      "timestamp": "2026-11-21T19:35:24.164Z",
+      "action": "USER_LOGIN",
+      "details": "User admin@demo.com logged in with role ADMIN.",
+      "user": "admin@demo.com",
+      "modelVersion": "N/A",
+      "policyVersion": "N/A"
+    },
+    {
+      "id": "AUD-1795287663969-553",
+      "timestamp": "2026-11-21T19:01:03.969Z",
+      "action": "RISK_ASSESSMENT_COMPLETED",
+      "caseId": "CASE-663963",
+      "details": "Applicant evaluated with PD: 3.29% (Low Risk). Policy verdict: COMPLIANT.",
+      "user": "admin@demo.com",
+      "modelVersion": "LGBM-V1-20261122",
+      "policyVersion": "POL-2026.1"
+    },
+    {
+      "id": "AUD-1795287663814-249",
+      "timestamp": "2026-11-21T19:01:03.814Z",
+      "action": "USER_LOGIN",
+      "details": "User admin@demo.com logged in with role ADMIN.",
+      "user": "admin@demo.com",
+      "modelVersion": "N/A",
+      "policyVersion": "N/A"
+    },
+    {
+      "id": "AUD-001",
+      "action": "SYSTEM_INITIALIZATION",
+      "details": "Governance and Model Risk Audit trail online.",
+      "user": "SYSTEM",
+      "modelVersion": "LGBM-V1-20261122",
+      "policyVersion": "POL-2026.1",
+      "timestamp": "2026-11-21T18:58:21.130Z"
+    }
+  ],
+  "policySettings": {
+    "dti_cap": 43,
+    "min_credit_score": 600,
+    "max_delinquencies": 1,
+    "max_loan_to_income": 0.5,
+    "max_utilization": 80,
+    "max_inquiries": 3,
+    "low_risk_threshold": 0.25,
+    "moderate_risk_threshold": 0.5,
+    "updatedBy": "admin@demo.com",
+    "updatedAt": "2026-11-21T18:58:21.130Z"
+  }
+}

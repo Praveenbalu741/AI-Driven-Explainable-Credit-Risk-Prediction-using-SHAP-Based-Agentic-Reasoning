@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+ml-service/venv/
+venv/
+ENV/
+env/
+*.joblib
+*.pkl
+
+# Node / Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Builds
+dist/
+dist-ssr/
+build/
+*.local
+
+# Environment & Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Operating System / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local databases and cache
+server/data_storage/*.pdf
+server/data_storage/db_fallback.json
